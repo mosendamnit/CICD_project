@@ -172,3 +172,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Ignore the train model from pushing into github
+
+*.h5
+*.keras
+
+
