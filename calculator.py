@@ -7,8 +7,8 @@ from streamlit_drawable_canvas import st_canvas
 import cv2
 
 # Load the trained models (replace with correct paths)
-digit_model = tf.keras.models.load_model('digit_model.keras')
-symbol_model = tf.keras.models.load_model('symbol_model.h5')
+digit_model = tf.keras.models.load_model('digit_model.keras', compile= False)
+symbol_model = tf.keras.models.load_model('symbol_model.h5' , compile= False)
 
 # Class names for symbols
 symbol_class_names = ['+', '-', 'X', '÷']
