@@ -7,7 +7,7 @@ WORKDIR / app
 
 # Run requirments
 
-RUN pip install --uppgrade pip & pip install - r requirments.txt
+RUN pip install --upgrade pip & pip install - r requirements.txt
 
 # copy all file to dockerimge
 
