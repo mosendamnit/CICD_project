@@ -1,22 +1,20 @@
-# Base image with python
+# Base image
 FROM python:3.11-slim
 
 # Set working directory
+WORKDIR /app
 
-WORKDIR / app
+# Copy requirements first
+COPY requirements.txt .
 
-# Run requirments
-
+# Install Python dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-
-# copy all file to dockerimge
-
+# Copy rest of the code
 COPY . .
 
-
-# Expose Steamlot Port 
+# Expose Streamlit port
 EXPOSE 8501
 
-# Run Streamlit app
+# Run the app
 CMD ["streamlit", "run", "calculator.py", "--server.port=8501", "--server.address=0.0.0.0"]
